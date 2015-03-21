@@ -1,0 +1,22 @@
+[gui]
+	fontdiff = -family \"Source Code Pro\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+[init]
+	templatedir = ~/.git_template
+[push]
+	default = current
+[color]
+	ui = auto
+[core]
+	editor = vim
+	autocrlf = input
+	excludesfile = ~/.gitignore
+[merge]
+	ff = only
+[commit]
+	template = ~/.gitmessage
+[fetch]
+	purne = true
+[cola]
+	fontdiff = Source Code Pro,11,-1,5,50,0,0,0,0,0
+[include]
+  path = ~/.gitconfig.local
