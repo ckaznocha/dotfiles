@@ -10,8 +10,6 @@
 	editor = vim
 	autocrlf = input
 	excludesfile = ~/.gitignore
-[merge]
-	ff = only
 [commit]
 	template = ~/.gitmessage
 [fetch]
