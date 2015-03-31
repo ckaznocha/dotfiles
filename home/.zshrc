@@ -25,7 +25,7 @@ ZSH_CUSTOM=~/.zsh-custom
 # Custom plugins may be added to ~/zsh-custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man colorize compleat brew npm zsh-syntax-highlighting)
+plugins=(git colored-man colorize compleat command-not-found brew docker npm tmux tmuxinator zsh-syntax-highlighting)
 
 # User configuration
 
