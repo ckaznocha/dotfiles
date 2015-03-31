@@ -6,7 +6,7 @@ export TERM=xterm-256color
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="wedisagree"
+ZSH_THEME="mh"
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-bright.dark.sh"
@@ -25,7 +25,7 @@ ZSH_CUSTOM=~/.zsh-custom
 # Custom plugins may be added to ~/zsh-custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man colorize compleat brew npm zsh-syntax-highlighting)
+plugins=(git colored-man colorize compleat command-not-found brew docker npm tmux tmuxinator zsh-syntax-highlighting)
 
 # User configuration
 

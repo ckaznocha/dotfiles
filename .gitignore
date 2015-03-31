@@ -1,2 +1,3 @@
 # VIM Plugins
 home/.vim/bundle/*
+*.sublime-workspace
