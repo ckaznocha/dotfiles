@@ -40,6 +40,11 @@ set smarttab			"use tabs at the start of the line, spaces elsewhere
 set nowrap				"Don't wrap lines
 set linebreak			"Wrap lines at convenient places
 
+" Swap files
+set noswapfile
+set nobackup
+set nowb
+
 " UI
 set laststatus=2
 set number              " show line numbers
