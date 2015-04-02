@@ -6,7 +6,7 @@ export TERM=xterm-256color
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="mh"
+ZSH_THEME="wedisagree_ckmod"
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-bright.dark.sh"
