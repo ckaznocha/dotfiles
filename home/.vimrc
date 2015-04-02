@@ -18,7 +18,9 @@ Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'fatih/vim-go'
-Bundle 'yonchu/accelerated-smooth-scroll'
+Plugin 'yonchu/accelerated-smooth-scroll'
+Plugin 'majutsushi/tagbar'
+Plugin 'SirVer/ultisnips'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -60,6 +62,7 @@ set notimeout                   " No command timeout
 set showcmd                     " Show typed command prefixes while waiting for operator
 set scrolloff=3                 " Scroll when the cursor is 3 lines from edge
 set autoread                    " No prompt for file changes outside Vim
+set hidden
 
 " Mouse
 set mouse=a
@@ -87,6 +90,7 @@ let g:airline#extensions#hunks#enabled = 1
 let g:airline#extensions#whitespace#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tmuxline#enabled = 1
 
 " unicode symbols
 if !exists('g:airline_symbols')
