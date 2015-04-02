@@ -34,17 +34,17 @@ syntax enable			" enable syntax processing
 set background=dark
 
 " White Space
-set tabstop=4			" number of visual spaces per TAB
-set softtabstop=4		" number of spaces in tab when editing
+set tabstop=2			" number of visual spaces per TAB
+set softtabstop=2		" number of spaces in tab when editing
 set autoindent
 set smarttab			"use tabs at the start of the line, spaces elsewhere
 set nowrap				"Don't wrap lines
 set linebreak			"Wrap lines at convenient places
 
 " Swap files
-set noswapfile
-set nobackup
-set nowb
+set swapfile                    " Keep swapfiles
+set directory=~/.vim-tmp,~/tmp,/var/tmp,/tmp
+set backupdir=~/.vim-tmp,~/tmp,/var/tmp,/tmp
 
 " UI
 set laststatus=2
@@ -128,3 +128,11 @@ if &term == "screen-256color"
 	let &t_SI = "\<Esc>[3 q"
 	let &t_EI = "\<Esc>[0 q"
 endif
+
+" VIM-GO
+let g:go_fmt_command = "goimports"
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
