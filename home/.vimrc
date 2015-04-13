@@ -104,7 +104,6 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.whitespace = 'Ξ'
 
 " NERD Trea
-autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let NERDTreeSortHiddenFirst = 1
 let NERDTreeChDirMode = 1
@@ -113,6 +112,58 @@ let NERDTreeMouseMode = 2
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
+
+" ==================== YouCompleteMe ====================
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_min_num_of_chars_for_completion = 1
+
+" ==================== UltiSnips ====================
+
+function! g:UltiSnips_Complete()
+    call UltiSnips#ExpandSnippet()
+    if g:ulti_expand_res == 0
+        if pumvisible()
+            return "\<C-n>"                                                                                                                                                               
+        else
+            call UltiSnips#JumpForwards()
+            if g:ulti_jump_forwards_res == 0
+               return "\<TAB>"
+            endif
+        endif
+    endif
+    return ""
+endfunction
+
+function! g:UltiSnips_Reverse()                                                                                                                                                           
+        call UltiSnips#JumpBackwards()
+        if g:ulti_jump_backwards_res == 0
+                return "\<C-P>"
+        endif
+
+        return ""
+endfunction
+
+if !exists("g:UltiSnipsJumpForwardTrigger")
+        let g:UltiSnipsJumpForwardTrigger = "<tab>"
+endif
+
+if !exists("g:UltiSnipsJumpBackwardTrigger")
+        let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+endif
+
+au InsertEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+au InsertEnter * exec "inoremap <silent> " . g:UltiSnipsJumpBackwardTrigger . " <C-R>=g:UltiSnips_Reverse()<cr>"
+
+" this mapping Enter key to <C-y> to chose the current highlight item 
+" and close the selection list, same as other IDEs.
+" CONFLICT with some plugins like tpope/Endwise
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Better Completion
+set complete=.,w,b,u,t
+set completeopt=longest,menuone
+
+
 
 " Fugitive
 " " Automatically delete Fugitive buffers that are no longer being used.
