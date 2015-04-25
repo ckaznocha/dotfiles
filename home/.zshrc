@@ -43,3 +43,6 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
    export EDITOR='vim'
 fi
+
+# gvm config
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
