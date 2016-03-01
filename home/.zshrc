@@ -29,7 +29,7 @@ plugins=(git colored-man colorize compleat command-not-found brew docker npm tmu
 
 # User configuration
 
-export PATH="~/.cabal/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="~/.swift/bin:~/.cabal/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -46,3 +46,4 @@ fi
 
 # gvm config
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+[[ -s "/home/ckaznocha/.gvm/scripts/gvm" ]] && source "/home/ckaznocha/.gvm/scripts/gvm"
