@@ -21,7 +21,7 @@
 
 # The prompt
 
-PROMPT='[%{$fg[$NCOLOR]%}%B%n@%m%b%{$reset_color%}:%{$fg[red]%}%30<...<%~%<<%{$reset_color%}]%(!.#.$) '
+PROMPT='%{$fg_bold[green]%}%B%n@%m%b%{$reset_color%}:%{$fg_bold[blue]%}%30<...<%~%<<%{$reset_color%} %(!.#.$) '
 
 # The right-hand prompt
 

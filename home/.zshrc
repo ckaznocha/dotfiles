@@ -9,8 +9,10 @@ export TERM=xterm-256color
 ZSH_THEME="wedisagree_ckmod"
 
 # Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/base16-bright.dark.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+# BASE16_SHELL="$HOME/.config/base16-shell/base16-bright.dark.sh"
+# [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+DRACULA_SHELL="$HOME/.config/dracula-shell/dracula.sh"
+[[ -s $DRACULA_SHELL ]] && source $DRACULA_SHELL
 
 # Enable command auto-correction.
 ENABLE_CORRECTION="true"
