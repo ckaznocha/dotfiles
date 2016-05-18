@@ -22,6 +22,7 @@ Plugin 'yonchu/accelerated-smooth-scroll'
 Plugin 'majutsushi/tagbar'
 Plugin 'SirVer/ultisnips'
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plugin 'powerline/fonts'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -31,10 +32,10 @@ filetype plugin indent on    " required
 
 " Colors
 " let base16colorspace=256 " Access colors present in 256 colorspace
-set t_Co=256
+"set t_Co=256
 " colorscheme base16-bright	" awesome colorscheme
 syntax enable			" enable syntax processing
-set background=dark
+"set background=dark
 color dracula
 
 " White Space
@@ -59,7 +60,7 @@ set wildmenu            " visual autocomplete for command menu
 set showmatch           " highlight matching [{()}]
 set ruler				" Aways show info along the bottom
 set showmode			" display my current mode down at the bottom
-set guifont=Source\ Code\ Pro:h12
+set guifont=Inconsolata-g\ for\ Powerline\ g:h10
 set notimeout                   " No command timeout
 set showcmd                     " Show typed command prefixes while waiting for operator
 set scrolloff=3                 " Scroll when the cursor is 3 lines from edge
@@ -93,13 +94,14 @@ let g:airline#extensions#whitespace#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tmuxline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 " unicode symbols
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '◀'
+"let g:airline_left_sep = '▶'
+"let g:airline_right_sep = '◀'
 let g:airline_symbols.linenr = '␊'
 let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.paste = 'ρ'
