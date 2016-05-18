@@ -60,7 +60,7 @@ set wildmenu            " visual autocomplete for command menu
 set showmatch           " highlight matching [{()}]
 set ruler				" Aways show info along the bottom
 set showmode			" display my current mode down at the bottom
-set guifont=Inconsolata-g\ for\ Powerline\ g:h10
+set guifont=Inconsolata-g\ for\ Powerline:h10
 set notimeout                   " No command timeout
 set showcmd                     " Show typed command prefixes while waiting for operator
 set scrolloff=3                 " Scroll when the cursor is 3 lines from edge
