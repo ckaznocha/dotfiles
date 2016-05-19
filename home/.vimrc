@@ -8,7 +8,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
-" Plugin 'chriskempson/base16-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
@@ -31,12 +30,10 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " Colors
-" let base16colorspace=256 " Access colors present in 256 colorspace
-"set t_Co=256
-" colorscheme base16-bright	" awesome colorscheme
+set t_Co=256
 syntax enable			" enable syntax processing
-"set background=dark
-color dracula
+set background=dark
+colorscheme dracula
 
 " White Space
 set tabstop=2			" number of visual spaces per TAB

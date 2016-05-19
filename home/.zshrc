@@ -49,3 +49,6 @@ fi
 # gvm config
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 [[ -s "/home/ckaznocha/.gvm/scripts/gvm" ]] && source "/home/ckaznocha/.gvm/scripts/gvm"
+
+# added by travis gem
+[ -f /home/clifton/.travis/travis.sh ] && source /home/clifton/.travis/travis.sh
