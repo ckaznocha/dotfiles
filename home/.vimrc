@@ -20,8 +20,12 @@ Plugin 'fatih/vim-go'
 Plugin 'yonchu/accelerated-smooth-scroll'
 Plugin 'majutsushi/tagbar'
 Plugin 'SirVer/ultisnips'
-Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plugin 'dracula/vim'
 Plugin 'powerline/fonts'
+Plugin 'junegunn/vim-emoji'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-rake'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
