@@ -1,3 +1,4 @@
+#! /zsh
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 export TERM=xterm-256color
@@ -48,7 +49,14 @@ fi
 
 # gvm config
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
-[[ -s "/home/ckaznocha/.gvm/scripts/gvm" ]] && source "/home/ckaznocha/.gvm/scripts/gvm"
 
 # added by travis gem
 [ -f /home/clifton/.travis/travis.sh ] && source /home/clifton/.travis/travis.sh
+
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
+
+export PATH=/usr/local/bin:/usr/local/sbin:$HOME/.rbenv/bin:$HOME/.rbenv/shims:/usr/local/share/npm/bin:$PATH
+
+eval "$(rbenv init -)"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

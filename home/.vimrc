@@ -68,6 +68,13 @@ set scrolloff=3                 " Scroll when the cursor is 3 lines from edge
 set autoread                    " No prompt for file changes outside Vim
 set hidden
 
+if has("gui_running")
+   let s:uname = system("uname")
+   if s:uname == "Darwin\n"
+      set guifont=Inconsolata-g\ for\ Powerline:h10
+   endif
+endif
+
 " Mouse
 set mouse=a
 set ttymouse=xterm2
