@@ -32,7 +32,7 @@ plugins=(git colored-man colorize compleat command-not-found brew docker npm tmu
 
 # User configuration
 
-export PATH="~/.swift/bin:~/.cabal/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="$HOME/.swift/usr/bin:$HOME/.cabal/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -47,9 +47,6 @@ else
    export EDITOR='vim'
 fi
 
-# gvm config
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
-
 # added by travis gem
 [ -f /home/clifton/.travis/travis.sh ] && source /home/clifton/.travis/travis.sh
 
@@ -60,3 +57,8 @@ export PATH=/usr/local/bin:/usr/local/sbin:$HOME/.rbenv/bin:$HOME/.rbenv/shims:/
 eval "$(rbenv init -)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+#Go
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin

@@ -24,3 +24,5 @@
 	rebase = true
 [user]
 	signingkey = 26E33816
+[url "git@github.com:"]
+	insteadOf = https://github.com/
