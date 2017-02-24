@@ -48,7 +48,7 @@ else
 fi
 
 # added by travis gem
-[ -f /home/clifton/.travis/travis.sh ] && source /home/clifton/.travis/travis.sh
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
