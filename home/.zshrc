@@ -9,9 +9,7 @@ export TERM=xterm-256color
 # time that oh-my-zsh is loaded.
 ZSH_THEME="wedisagree_ckmod"
 
-# Base16 Shell
-# BASE16_SHELL="$HOME/.config/base16-shell/base16-bright.dark.sh"
-# [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+# Dracula Shell
 DRACULA_SHELL="$HOME/.config/dracula-shell/dracula.sh"
 [[ -s $DRACULA_SHELL ]] && source $DRACULA_SHELL
 
@@ -62,3 +60,5 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+export PATH=$PATH:$HOME/.config/composer/vendor/bin
