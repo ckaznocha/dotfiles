@@ -10,10 +10,15 @@
 	editor = vim
 	autocrlf = input
 	excludesfile = ~/.gitignore
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [commit]
 	template = ~/.gitmessage
 [fetch]
 	purne = true
+[filter "lfs"]
+	smudge = git-lfs smudge %f
+	required = true
+	clean = git-lfs clean %f
 [cola]
 	fontdiff = Source Code Pro,11,-1,5,50,0,0,0,0,0
 [include]
@@ -24,3 +29,5 @@
 	rebase = true
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+[http "https://gopkg.in"]
+	followRedirects = true

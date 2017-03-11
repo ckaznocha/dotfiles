@@ -50,7 +50,7 @@ fi
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
-export PATH=/usr/local/bin:/usr/local/sbin:$HOME/.rbenv/bin:$HOME/.rbenv/shims:/usr/local/share/npm/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$HOME/.rbenv/bin:$HOME/.rbenv/shims:/usr/local/share/npm/bin:$HOME/go/bin:$PATH
 
 eval "$(rbenv init -)"
 
@@ -62,3 +62,12 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 export PATH=$PATH:$HOME/.config/composer/vendor/bin
+
+export PATH=$PATH:$HOME/perl5/bin
+export PERL5LIB=$HOME/perl5/lib/perl5
+export PERL_LOCAL_LIB_ROOT=$HOME/perl5
+export PERL_MB_OPT="--install_base \"$HOME/perl5\""
+export PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"
+
+export ANDROID_HOME=/usr/local/opt/android-sdk
+
