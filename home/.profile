@@ -22,3 +22,4 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH=$PATH:$HOME/.config/diff-so-fancy/

@@ -10,6 +10,7 @@ GIT_USER_KEYS.each do |key|
   end
 end
 
+system("chsh -s $(which zsh)")
 system('$HOME/.config/powerline/fonts/install.sh')
 system('echo -e ":PluginInstall\n" | vim')
 system(
