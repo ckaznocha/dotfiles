@@ -22,7 +22,7 @@
 [cola]
 	fontdiff = Source Code Pro,11,-1,5,50,0,0,0,0,0
 [include]
-  path = ~/.gitconfig.local
+	path = ~/.gitconfig.local
 [branch]
 	autosetuprebase = always
 [pull]

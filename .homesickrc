@@ -1,13 +1,20 @@
 #!/usr/bin/env ruby
 
-GitUserKeys = [:name, :email, :signingKey]
-GitLocalConfig = "$HOME/.gitconfig.local"
+GIT_USER_KEYS = [:name, :email, :signingKey].freeze
+GIT_LOCAL_CONFIG = '$HOME/.gitconfig.local'.freeze
 
-GitUserKeys.each do |key|
-				val = self.ask "Git user.#{key}: "
-				system("git config -f #{GitLocalConfig} user.#{key} '#{val}'") unless val.to_s.empty?
+GIT_USER_KEYS.each do |key|
+  val = ask "Git user.#{key}: "
+  unless val.to_s.empty?
+    system("git config -f #{GIT_LOCAL_CONFIG} user.#{key} '#{val}'")
+  end
 end
 
-system("$HOME/.config/powerline/fonts/install.sh")
-system("echo -e ':PluginInstall\n' | vim")
-system("$HOME/.vim/bundle/YouCompleteMe/install.py --gocode-completer --tern-completer --racer-completer")
+system('$HOME/.config/powerline/fonts/install.sh')
+system('echo -e ":PluginInstall\n" | vim')
+system(
+  '$HOME/.vim/bundle/YouCompleteMe/install.py '\
+  '--gocode-completer '\
+  '--tern-completer '\
+  '--racer-completer'
+)
