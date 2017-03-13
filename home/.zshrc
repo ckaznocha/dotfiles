@@ -1,6 +1,7 @@
 #! /zsh
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
+
 export TERM=xterm-256color
 
 # Set name of the theme to load.
@@ -26,17 +27,45 @@ ZSH_CUSTOM=~/.zsh-custom
 # Custom plugins may be added to ~/zsh-custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man colorize compleat command-not-found brew docker npm tmux tmuxinator zsh-syntax-highlighting)
+plugins=(
+    brew
+    cabal
+    cargo
+    colored-man
+    colorize
+    command-not-found
+    common-aliases
+    compleat
+    composer
+    docker
+    emoji
+    gem
+    git
+    golang
+    kubectl
+    man
+    node
+    npm
+    osx
+    pip
+    python
+    ruby
+    rust
+    swiftpm
+    tmux
+    tmuxinator
+    vagrant
+    vundle
+    yarn
+    zsh-syntax-highlighting
+)
 
 # User configuration
-
-export PATH="$HOME/.swift/usr/bin:$HOME/.cabal/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-# export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -50,24 +79,7 @@ fi
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
-export PATH=/usr/local/bin:/usr/local/sbin:$HOME/.rbenv/bin:$HOME/.rbenv/shims:/usr/local/share/npm/bin:$HOME/go/bin:$PATH
 
 eval "$(rbenv init -)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-#Go
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-
-export PATH=$PATH:$HOME/.config/composer/vendor/bin
-
-export PATH=$PATH:$HOME/perl5/bin
-export PERL5LIB=$HOME/perl5/lib/perl5
-export PERL_LOCAL_LIB_ROOT=$HOME/perl5
-export PERL_MB_OPT="--install_base \"$HOME/perl5\""
-export PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"
-
-export ANDROID_HOME=/usr/local/opt/android-sdk
-

@@ -10,6 +10,12 @@ GIT_USER_KEYS.each do |key|
   end
 end
 
+system('[ ! -d "$HOME/bin" ] && mkdir $HOME/bin')
+system(
+  'ln -sf '\
+  '$PWD/home/.config/diff-so-fancy/diff-so-fancy '\
+  '$HOME/bin/diff-so-fancy'
+)
 system('chsh -s $(which zsh)')
 system('./home/.config/powerline/fonts/install.sh')
 system('echo -e ":PluginInstall\n" | vim')

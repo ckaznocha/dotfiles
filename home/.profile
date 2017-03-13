@@ -1,3 +1,4 @@
+# shellcheck disable=SC2148
 # ~/.profile: executed by the command interpreter for login shells.
 # This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
 # exists.
@@ -12,14 +13,49 @@
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
     if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
+        # shellcheck disable=SC1090
+        . "$HOME/.bashrc"
     fi
 fi
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
+
+paths=(
+    $HOME/bin
+    $HOME/.swift/usr/bin
+    $HOME/.cabal/bin
+    $HOME/.rbenv/bin
+    $HOME/.rbenv/shims
+    $HOME/.cargo/bin
+    $HOME/.config/composer/vendor/bin
+    /usr/local/share/npm/bin
+)
+
+#Go
+if [ -d "/usr/local/go" ]; then
+    export GOROOT=/usr/local/go
+    export GOPATH=$HOME/go
+    paths+=($GOROOT/bin)
+    paths+=($GOPATH/bin)
 fi
 
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH=$PATH:$HOME/.config/diff-so-fancy/
+#Android
+if [ -d "/usr/local/opt/android-sdk" ]; then
+    export ANDROID_HOME=/usr/local/opt/android-sdk
+fi
+
+#Perl
+if [ -d "$HOME/perl5" ]; then
+    export PERL_LOCAL_LIB_ROOT=$HOME/perl5
+    export PERL5LIB=$PERL_LOCAL_LIB_ROOT/lib/perl5
+    export PERL_MB_OPT="--install_base \"$PERL_LOCAL_LIB_ROOT\""
+    export PERL_MM_OPT="INSTALL_BASE=$PERL_LOCAL_LIB_ROOT"
+    paths+=($PERL_LOCAL_LIB_ROOT/bin)
+fi
+
+for i in "${paths[@]}"
+do
+    if [ -d "$i" ]; then
+      PATH=$PATH:$i
+    fi
+done
