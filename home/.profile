@@ -55,7 +55,8 @@ fi
 
 for i in "${paths[@]}"
 do
-    if [ -d "$i" ]; then
-      PATH=$PATH:$i
+    if [ -d "$i" ] && [[ $PATH != *"$i"* ]]; then
+      PATH=$i:$PATH
     fi
 done
+
