@@ -11,6 +11,7 @@ GIT_USER_KEYS.each do |key|
 end
 
 system('[ ! -d "$HOME/bin" ] && mkdir $HOME/bin')
+system('[ ! -d "$HOME/bin" ] && mkdir $HOME/.git_template')
 system(
   'ln -sf '\
   '$PWD/home/.config/diff-so-fancy/diff-so-fancy '\

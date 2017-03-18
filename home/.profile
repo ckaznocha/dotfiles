@@ -34,9 +34,10 @@ paths=(
 #Go
 if [ -d "/usr/local/go" ]; then
     export GOROOT=/usr/local/go
-    export GOPATH=$HOME/go
+    export GOPATH=$HOME
     paths+=($GOROOT/bin)
     paths+=($GOPATH/bin)
+    CDPATH=$GOPATH/src/github.com
 fi
 
 #Android
