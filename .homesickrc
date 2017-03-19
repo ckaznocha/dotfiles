@@ -12,6 +12,7 @@ end
 
 system('[ ! -d "$HOME/bin" ] && mkdir $HOME/bin')
 system('[ ! -d "$HOME/bin" ] && mkdir $HOME/.git_template')
+system('curl https://sh.rustup.rs -sSf | sh') if ask('Install Rust?') == 'y'
 system(
   'ln -sf '\
   '$PWD/home/.config/diff-so-fancy/diff-so-fancy '\
