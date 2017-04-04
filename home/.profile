@@ -9,13 +9,10 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-# if running bash
-if [ -n "$BASH_VERSION" ]; then
-    # include .bashrc if it exists
-    if [ -f "$HOME/.bashrc" ]; then
-        # shellcheck disable=SC1090
-        . "$HOME/.bashrc"
-    fi
+# if running bash include .bashrc if it exists
+if [ -n "$BASH_VERSION" ] && [ -f "$HOME/.bashrc" ]; then
+    # shellcheck disable=SC1090
+    . "$HOME/.bashrc"
 fi
 
 # set PATH so it includes user's private bin if it exists
@@ -31,13 +28,18 @@ paths=(
     /usr/local/share/npm/bin
 )
 
+cdpaths=(
+    $HOME
+    $HOME/Library
+)
+
 #Go
 if [ -d "/usr/local/go" ]; then
     export GOROOT=/usr/local/go
     export GOPATH=$HOME
     paths+=($GOROOT/bin)
     paths+=($GOPATH/bin)
-    CDPATH=$GOPATH/src/github.com
+    cdpaths+=($GOPATH/src/github.com)
 fi
 
 #Android
@@ -61,3 +63,10 @@ do
     fi
 done
 
+CDPATH="."
+for i in "${cdpaths[@]}"
+do
+    if [ -d "$i" ] && [[ $CDPATH != *"$i"* ]]; then
+      CDPATH=$CDPATH:$i
+    fi
+done
