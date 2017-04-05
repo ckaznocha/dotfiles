@@ -96,6 +96,8 @@ do
 done
 
 export TERM=xterm-256color
-export EDITOR='vim'
-export LESS="JNR"
+export EDITOR="vim"
+export PAGER="less"
+export LESSOPEN="| src-hilite-lesspipe.sh %s"
+export LESS="~#3FgJNMRSWx4"
 export LANG=en_US.UTF-8

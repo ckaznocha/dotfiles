@@ -29,7 +29,7 @@ plugins=(
     brew
     cabal
     cargo
-    colored-man
+    colored-man-pages
     colorize
     command-not-found
     common-aliases
