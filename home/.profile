@@ -9,11 +9,23 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
+source_files=(
+    $HOME/.travis/travis.sh
+    $HOME/.rvm/scripts/rvm
+)
+
 # if running bash include .bashrc if it exists
-if [ -n "$BASH_VERSION" ] && [ -f "$HOME/.bashrc" ]; then
-    # shellcheck disable=SC1090
-    . "$HOME/.bashrc"
+if [ -n "$BASH_VERSION" ]; then
+    source_files+=($HOME/.bashrc)
 fi
+
+for i in "${source_files[@]}"
+do
+    if [ -s "$i" ]; then
+        # shellcheck disable=SC1090
+        source "$i"
+    fi
+done
 
 # set PATH so it includes user's private bin if it exists
 
@@ -70,3 +82,20 @@ do
       CDPATH=$CDPATH:$i
     fi
 done
+
+eval_files=(
+    rbenv
+    nodenv
+)
+
+for i in "${eval_files[@]}"
+do
+    if [ -s "$(which "$i")" ]; then
+      eval "$($i init -)"
+    fi
+done
+
+export TERM=xterm-256color
+export EDITOR='vim'
+export LESS="JNR"
+export LANG=en_US.UTF-8
