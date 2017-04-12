@@ -6,11 +6,15 @@
 	default = current
 [color]
 	ui = auto
+[color "status"]
+  added = green
+  changed = yellow bold
+  untracked = red bold
 [core]
 	editor = vim
 	autocrlf = input
 	excludesfile = ~/.gitignore
-	pager = diff-so-fancy | less -nX
+	pager = diff-so-fancy | less -n
 [commit]
 	template = ~/.gitmessage
 [fetch]
@@ -19,6 +23,10 @@
 	smudge = git-lfs smudge %f
 	required = true
 	clean = git-lfs clean %f
+[help]
+  autoCorrect = 10
+[log]
+  decorate = full
 [cola]
 	fontdiff = Source Code Pro,11,-1,5,50,0,0,0,0,0
 [include]
@@ -27,6 +35,12 @@
 	autosetuprebase = always
 [pull]
 	rebase = true
+[rebase]
+  autoStash = true
+[status]
+  showUntrackedFiles = all
+[stash]
+  showPatch = true
 [http "https://gopkg.in"]
 	followRedirects = true
 [color "diff-highlight"]
