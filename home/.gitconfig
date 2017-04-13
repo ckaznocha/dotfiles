@@ -1,50 +1,50 @@
-[gui]
-	fontdiff = -family \"Source Code Pro\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
-[init]
-	templatedir = ~/.git_template
-[push]
-	default = current
+[branch]
+	autosetuprebase = always
+[cola]
+	fontdiff = Source Code Pro,11,-1,5,50,0,0,0,0,0
 [color]
 	ui = auto
+[color "diff-highlight"]
+	newHighlight = green bold 22
+	newNormal = green bold
+	oldHighlight = red bold 52
+	oldNormal = red bold
 [color "status"]
-  added = green
-  changed = yellow bold
-  untracked = red bold
-[core]
-	editor = vim
-	autocrlf = input
-	excludesfile = ~/.gitignore
-	pager = diff-so-fancy | less -n
+	added = green
+	changed = yellow bold
+	untracked = red bold
 [commit]
 	template = ~/.gitmessage
+[core]
+	autocrlf = input
+	editor = vim
+	excludesfile = ~/.gitignore
+	pager = diff-so-fancy | less -n
 [fetch]
 	purne = true
 [filter "lfs"]
-	smudge = git-lfs smudge %f
-	required = true
 	clean = git-lfs clean %f
+	required = true
+	smudge = git-lfs smudge %f
+[gui]
+	fontdiff = -family \"Source Code Pro\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
 [help]
-  autoCorrect = 10
-[log]
-  decorate = full
-[cola]
-	fontdiff = Source Code Pro,11,-1,5,50,0,0,0,0,0
-[include]
-	path = ~/.gitconfig.local
-[branch]
-	autosetuprebase = always
-[pull]
-	rebase = true
-[rebase]
-  autoStash = true
-[status]
-  showUntrackedFiles = all
-[stash]
-  showPatch = true
+	autoCorrect = 10
 [http "https://gopkg.in"]
 	followRedirects = true
-[color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
+[include]
+	path = ~/.gitconfig.local
+[init]
+	templatedir = ~/.git_template
+[log]
+	decorate = full
+[pull]
+	rebase = true
+[push]
+	default = current
+[rebase]
+	autoStash = true
+[stash]
+	showPatch = true
+[status]
+	showUntrackedFiles = all
