@@ -30,6 +30,7 @@ done
 # set PATH so it includes user's private bin if it exists
 
 paths=(
+    /usr/local/bin
     $HOME/bin
     $HOME/.swift/usr/bin
     $HOME/.cabal/bin
