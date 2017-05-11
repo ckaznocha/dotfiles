@@ -47,10 +47,8 @@ cdpaths=(
 )
 
 #Go
-if [ -d "/usr/local/go" ]; then
-    export GOROOT=/usr/local/go
+if type "go" >/dev/null 2>&1; then
     export GOPATH=$HOME
-    paths+=($GOROOT/bin)
     paths+=($GOPATH/bin)
     cdpaths+=($GOPATH/src/github.com)
 fi
