@@ -60,8 +60,9 @@ plugins=(
 
 # User configuration
 
-source $ZSH/oh-my-zsh.sh
+if [[ $- == *i* ]]; then
+    source $ZSH/oh-my-zsh.sh
+    test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+fi
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
