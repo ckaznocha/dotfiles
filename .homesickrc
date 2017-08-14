@@ -16,9 +16,4 @@ system('curl https://sh.rustup.rs -sSf | sh') if ask('Install Rust?') == 'y'
 system('chsh -s $(which zsh)')
 system('./home/.config/powerline/fonts/install.sh')
 system('echo -e ":PluginInstall\n" | vim')
-system(
-  './home/.vim/bundle/YouCompleteMe/install.py '\
-  '--gocode-completer '\
-  '--tern-completer '\
-  '--racer-completer'
-)
+system('./home/.vim/bundle/YouCompleteMe/install.py --all')
