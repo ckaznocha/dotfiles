@@ -66,3 +66,6 @@ if [[ $- == *i* ]]; then
 fi
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
+
+# added by travis gem
+[ -f /Users/clifkaznocha/.travis/travis.sh ] && source /Users/clifkaznocha/.travis/travis.sh

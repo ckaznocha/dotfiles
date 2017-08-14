@@ -115,3 +115,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# added by travis gem
+[ -f /Users/clifkaznocha/.travis/travis.sh ] && source /Users/clifkaznocha/.travis/travis.sh

@@ -16,6 +16,8 @@
 	<false/>
 	<key>DimOnlyText</key>
 	<true/>
+	<key>DisableFullscreenTransparency</key>
+	<false/>
 	<key>DisableWindowSizeSnap</key>
 	<false/>
 	<key>DoubleClickPerformsSmartSelection</key>
@@ -93,11 +95,11 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>2410 1158 620 392 1440 390 2560 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>585 273 796 473 0 0 1440 877 </string>
+	<string>422 303 1018 447 0 0 1440 878 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 293 592 584 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>732 371 810 473 0 0 1440 877 </string>
+	<string>3 405 810 473 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>506 86 810 473 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
@@ -1315,6 +1317,8 @@
 	<true/>
 	<key>NoSyncConfirmBeta</key>
 	<true/>
+	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
+	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallUtilitiesPackage</key>
@@ -1379,7 +1383,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-03-11T23:32:16Z</date>
+	<date>2017-08-10T03:50:37Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1405,6 +1409,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.14</string>
+	<string>3.0.15</string>
 </dict>
 </plist>

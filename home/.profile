@@ -100,3 +100,4 @@ export PAGER="less"
 export LESSOPEN="| src-hilite-lesspipe.sh %s"
 export LESS="~#3FgJNMRSWXx4"
 export LANG=en_US.UTF-8
+export GPG_TTY=$(tty)
