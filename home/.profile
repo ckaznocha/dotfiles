@@ -39,6 +39,7 @@ paths=(
     $HOME/.cargo/bin
     $HOME/.config/composer/vendor/bin
     /usr/local/share/npm/bin
+    /usr/local/sbin
 )
 
 cdpaths=(
