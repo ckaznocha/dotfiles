@@ -56,6 +56,7 @@ plugins=(
     vundle
     yarn
     zsh-syntax-highlighting
+    zsh-autosuggestions
 )
 
 # User configuration

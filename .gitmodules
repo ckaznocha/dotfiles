@@ -10,3 +10,6 @@
 [submodule "home/.config/powerline/fonts"]
 	path = home/.config/powerline/fonts
 	url = https://github.com/powerline/fonts.git
+[submodule "home/.zsh-custom/plugins/zsh-autosuggestions"]
+	path = home/.zsh-custom/plugins/zsh-autosuggestions
+	url = git://github.com/zsh-users/zsh-autosuggestions
