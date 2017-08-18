@@ -57,6 +57,7 @@ plugins=(
     yarn
     zsh-syntax-highlighting
     zsh-autosuggestions
+    zsh-completions
 )
 
 # User configuration
