@@ -8,6 +8,8 @@
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
 	<integer>1</integer>
+	<key>AppleWindowTabbingMode</key>
+	<string>manual</string>
 	<key>AutoCommandHistory</key>
 	<false/>
 	<key>Default Bookmark Guid</key>
@@ -42,6 +44,8 @@
 	<integer>116</integer>
 	<key>HotkeyCode</key>
 	<integer>17</integer>
+	<key>HotkeyMigratedFromSingleToMulti</key>
+	<true/>
 	<key>HotkeyModifiers</key>
 	<integer>786721</integer>
 	<key>JobName</key>
@@ -92,14 +96,16 @@
 	<string>4080 978 564 77 2560 0 2560 1417 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>269 396 606 456 0 0 1440 877 </string>
+	<key>NSWindow Frame SUAutomaticUpdateAlert</key>
+	<string>412 529 616 174 0 0 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>2410 1158 620 392 1440 390 2560 1417 </string>
+	<string>970 770 620 392 0 0 2560 1418 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>422 303 1018 447 0 0 1440 878 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 293 592 584 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3 405 810 473 0 0 1440 878 </string>
+	<string>3 403 810 475 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>506 86 810 473 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
@@ -1383,9 +1389,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-08-10T03:50:37Z</date>
+	<date>2017-09-25T06:16:07Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
+	<key>SUSkippedVersion</key>
+	<string>3.1.1</string>
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowNewOutputIndicator</key>
@@ -1409,6 +1417,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.15</string>
+	<string>3.1.2</string>
 </dict>
 </plist>

@@ -58,6 +58,7 @@ plugins=(
     zsh-syntax-highlighting
     zsh-autosuggestions
     zsh-completions
+    zsh-histdb
 )
 
 # User configuration

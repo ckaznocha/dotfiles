@@ -12,6 +12,11 @@ end
 
 system('[ ! -d "$HOME/bin" ] && mkdir $HOME/bin')
 system('[ ! -d "$HOME/bin" ] && mkdir $HOME/.git_template')
+if ask('Install Homebrew') == 'y' then
+  system('/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"')
+  system('brew tap Homebrew/bundle')
+end
+system('brew bundle --file=./home/Brewfile')
 system('curl https://sh.rustup.rs -sSf | sh') if ask('Install Rust?') == 'y'
 system('chsh -s $(which zsh)')
 system('./home/.config/powerline/fonts/install.sh')
