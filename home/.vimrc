@@ -38,6 +38,8 @@ filetype plugin indent on    " required
 
 " Put your non-Plugin stuff after this line
 
+source $HOME/.vimrc.local
+
 " Colors
 set t_Co=256
 syntax enable			" enable syntax processing
