@@ -12,6 +12,7 @@
 source_files=(
     $HOME/.travis/travis.sh
     $HOME/.rvm/scripts/rvm
+    $HOME/.profile.local
 )
 
 # if running bash include .bashrc if it exists

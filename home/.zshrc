@@ -34,7 +34,6 @@ plugins=(
     command-not-found
     common-aliases
     compleat
-    composer
     docker
     emoji
     gem
@@ -55,10 +54,10 @@ plugins=(
     vagrant
     vundle
     yarn
-    zsh-syntax-highlighting
     zsh-autosuggestions
     zsh-completions
     zsh-histdb
+    zsh-syntax-highlighting
 )
 
 # User configuration
@@ -72,3 +71,4 @@ fi
 
 # added by travis gem
 [ -f /Users/clifkaznocha/.travis/travis.sh ] && source /Users/clifkaznocha/.travis/travis.sh
+
