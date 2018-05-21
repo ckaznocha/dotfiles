@@ -74,9 +74,9 @@ color dracula
 
 " White Space
 set autoindent
-set linebreak			"Wrap lines at convenient places
-set nowrap				"Don't wrap lines
-set smarttab			"use tabs at the start of the line, spaces elsewhere
+set linebreak			" Wrap lines at convenient places
+set nowrap		        " Don't wrap lines
+set smarttab			" use tabs at the start of the line, spaces elsewhere
 set softtabstop=2		" number of spaces in tab when editing
 set tabstop=2			" number of visual spaces per TAB
 
@@ -89,10 +89,9 @@ set swapfile                    " Keep swapfiles
 filetype indent on      " load filetype-specific indent files
 set autoread            " No prompt for file changes outside Vim
 set cursorline          " highlight current line
-"set cursorcolumn        " highlight current column
 set guifont=Inconsolata\ Nerd\ Font\ Medium\ 13
-set hidden
-set laststatus=2
+set hidden              " make buffers hidden when abandoned
+set laststatus=2        " always show the status line in the last window
 set notimeout           " No command timeout
 set number              " show line numbers
 set ruler               " Aways show info along the bottom
@@ -102,6 +101,7 @@ set showmatch           " highlight matching [{()}]
 set showmode            " display my current mode down at the bottom
 set wildmenu            " visual autocomplete for command menu
 set colorcolumn=80
+
 "set guicursor
 hi Cursor guifg=#f8f8f2 guibg=#646e96
 hi iCursor guifg=#f8f8f2 guibg=#646e96
@@ -138,7 +138,6 @@ let g:syntastic_enable_signs = 1
 " Signify
 let g:signify_realtime = 1
 let g:signify_sign_show_count = 0
-"let g:signify_sign_delete = '⚊'
 let g:signify_sign_delete = '__'
 let g:signify_sign_changedelete = g:signify_sign_delete
 
@@ -151,7 +150,6 @@ hi Error guibg=#ff5555 guifg=#f8f8f2
 hi vimError guibg=#ff5555 guifg=#f8f8f2
 hi vimWarn guibg=#ffb86c guifg=#44475a
 
-hi LineNr guibg=#44475a
 hi Pmenu ctermfg=15 ctermbg=61 cterm=NONE guifg=#f8f8f2 guibg=#646e96 gui=NONE
 hi PmenuSel ctermfg=16 ctermbg=84 cterm=bold guifg=#282a36 guibg=#50fa7b gui=NONE
 
@@ -195,7 +193,7 @@ let NERDTreeSortHiddenFirst = 1
 " ==================== YouCompleteMe ====================
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_min_num_of_chars_for_completion = 1
-
+:set completeopt=longest,menuone,preview
 " ==================== UltiSnips ====================
 
 "function! g:UltiSnips_Complete()

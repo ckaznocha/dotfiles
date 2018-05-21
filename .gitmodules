@@ -19,3 +19,6 @@
 [submodule "home/.config/nerd-fots"]
 	path = home/.config/nerd-fots
 	url = https://github.com/ryanoasis/nerd-fonts.git
+[submodule "home/.config/diff-so-fancy"]
+  path = home/.config/diff-so-fancy
+  url = https://github.com/so-fancy/diff-so-fancy.git

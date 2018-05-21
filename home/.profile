@@ -8,7 +8,7 @@
 # the default umask is set in /etc/profile; for setting the umask
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
-
+PATH=$HOME/bin:$PATH
 source_files=(
     $HOME/.travis/travis.sh
     $HOME/.rvm/scripts/rvm
@@ -32,13 +32,13 @@ done
 
 paths=(
     /usr/local/bin
-    $HOME/bin
     $HOME/.swift/usr/bin
     $HOME/.cabal/bin
     $HOME/.rbenv/bin
     $HOME/.rbenv/shims
     $HOME/.cargo/bin
     $HOME/.config/composer/vendor/bin
+    $HOME/.npm-global/bin
     /usr/local/share/npm/bin
     /usr/local/sbin
 )
@@ -103,3 +103,8 @@ export LESSOPEN="| src-hilite-lesspipe.sh %s"
 export LESS="~#3FgJNMRSWXx4"
 export LANG=en_US.UTF-8
 export GPG_TTY=$(tty)
+
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
