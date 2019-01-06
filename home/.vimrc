@@ -11,6 +11,7 @@ call plug#begin('~/.vim/plugged')
 "Plug 'airblade/vim-gitgutter'
 "Plug 'raimondi/delimitmate'
 "Plug 'ryanoasis/vim-devicons'
+Plug 'rust-lang/rust.vim'
 Plug 'Quramy/tsuquyomi'
 Plug 'Shougo/vimproc.vim'
 Plug 'SirVer/ultisnips'
@@ -23,6 +24,7 @@ Plug 'burnettk/vim-angular'
 Plug 'dracula/vim'
 Plug 'editorconfig/editorconfig-vim'
 "Plug 'ervandew/eclim'
+Plug 'vim-scripts/fountain.vim'
 Plug 'fatih/vim-go'
 Plug 'itchyny/vim-cursorword'
 Plug 'jiangmiao/auto-pairs'
@@ -39,6 +41,7 @@ Plug 'prabirshrestha/vim-lsp'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
+Plug 'jrozner/vim-antlr'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
@@ -57,6 +60,8 @@ endif
 if filereadable(expand('~/.vimrc.local'))
   source $HOME/.vimrc.local
 endif
+
+au BufRead,BufNewFile *.fountain		set filetype=fountain
 
 " All of your Plugs must be added before the following line
 call plug#end()            " required
@@ -150,7 +155,6 @@ hi SignifySignDelete gui=bold term=bold cterm=bold guifg=#ff5555 guibg=#44475a
 hi Error guibg=#ff5555 guifg=#f8f8f2
 hi vimError guibg=#ff5555 guifg=#f8f8f2
 hi vimWarn guibg=#ffb86c guifg=#44475a
-
 hi Pmenu ctermfg=15 ctermbg=61 cterm=NONE guifg=#f8f8f2 guibg=#646e96 gui=NONE
 hi PmenuSel ctermfg=16 ctermbg=84 cterm=bold guifg=#282a36 guibg=#50fa7b gui=NONE
 
@@ -278,3 +282,4 @@ if executable('go-langserver')
         \ 'whitelist': ['go'],
         \ })
 endif
+

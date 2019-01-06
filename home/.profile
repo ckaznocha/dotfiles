@@ -39,6 +39,7 @@ paths=(
     $HOME/.cargo/bin
     $HOME/.config/composer/vendor/bin
     $HOME/.npm-global/bin
+    $HOME/flutter/bin
     /usr/local/share/npm/bin
     /usr/local/sbin
 )
