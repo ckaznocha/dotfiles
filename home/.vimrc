@@ -29,6 +29,7 @@ Plug 'fatih/vim-go'
 Plug 'itchyny/vim-cursorword'
 Plug 'jiangmiao/auto-pairs'
 Plug 'majutsushi/tagbar'
+Plug 'glench/vim-jinja2-syntax'
 Plug 'junegunn/vim-emoji'
 Plug 'kchmck/vim-coffee-script'
 Plug 'leafgarland/typescript-vim'
@@ -199,6 +200,10 @@ let NERDTreeSortHiddenFirst = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_min_num_of_chars_for_completion = 1
 :set completeopt=longest,menuone,preview
+" Let clangd fully control code completion
+let g:ycm_clangd_uses_ycmd_caching = 0
+" Use installed clangd, not YCM-bundled clangd which doesn't get updates.
+let g:ycm_clangd_binary_path = exepath("clangd-10")
 " ==================== UltiSnips ====================
 
 "function! g:UltiSnips_Complete()
