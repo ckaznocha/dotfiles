@@ -6,11 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="wedisagree_ckmod"
-
-# Dracula Shell
-DRACULA_SHELL="$HOME/.config/dracula-shell/dracula.sh"
-[[ -s $DRACULA_SHELL ]] && source $DRACULA_SHELL
+ZSH_THEME="ckaznocha"
 
 # Enable command auto-correction.
 ENABLE_CORRECTION="true"
@@ -26,7 +22,10 @@ ZSH_CUSTOM=~/.zsh-custom
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    battery
+    branch
     brew
+    bgnotify
     cabal
     cargo
     colored-man-pages
@@ -34,11 +33,14 @@ plugins=(
     command-not-found
     common-aliases
     compleat
+    dash
     docker
     emoji
+    fzf
     gem
     git
     golang
+    grc
     kubectl
     man
     node
@@ -75,3 +77,4 @@ fi
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
