@@ -10,11 +10,11 @@ RPROMPT='%{$fg[blue]%}$(branch_prompt_info)%{$reset_color%} ${time}'
 
 FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
  --ansi
- --color=fg:#f8f8f2,hl:#8aff80
- --color=fg+:#ffffff,bg+:#504c67,hl+:#a2ff99
- --color=info:#504c67,prompt:#80ffea,pointer:#ff80bf
- --color=marker:#ffff80,spinner:#9580ff,header:#9580ff
- --color=gutter:#ff80bf
+ --color=fg:7,hl:2
+ --color=fg+:15,bg+:8,hl+:10
+ --color=info:8,prompt:6,pointer:5
+ --color=marker:3,spinner:5,header:5
+ --color=gutter:5
  --info=default
  --prompt=❯
  --pointer=➜'
