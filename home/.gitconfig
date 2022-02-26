@@ -2,17 +2,46 @@
 	autosetuprebase = always
 [cola]
 	fontdiff = Source Code Pro,11,-1,5,50,0,0,0,0,0
+# Dracula Dark Theme
 [color]
-	ui = auto
-[color "diff-highlight"]
-	newHighlight = green bold 22
-	newNormal = green bold
-	oldHighlight = red bold 52
-	oldNormal = red bold
+  ui = auto
+[color "branch"]
+  current = cyan bold reverse
+  local = white
+  plain =
+  remote = cyan
+[color "diff"]
+  commit =
+  func = cyan
+  plain =
+  whitespace = magenta reverse
+  meta = white
+  frag = cyan bold reverse
+  old = red
+  new = green
+[color "grep"]
+  context =
+  filename =
+  function =
+  linenumber = white
+  match =
+  selected =
+  separator =
+[color "interactive"]
+  error =
+  header =
+  help =
+  prompt =
 [color "status"]
-	added = green
-	changed = yellow bold
-	untracked = red bold
+  added = green
+  changed = white
+  header =
+  localBranch =
+  nobranch =
+  remoteBranch = cyan bold
+  unmerged = magenta bold reverse
+  untracked = red
+  updated = green bold
 [commit]
 	template = ~/.gitmessage
 [core]
@@ -36,6 +65,7 @@
 	path = ~/.gitconfig.local
 [init]
 	templatedir = ~/.git_template
+	defaultBranch = main
 [log]
 	decorate = full
 [pull]
