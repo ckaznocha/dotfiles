@@ -1,5 +1,6 @@
 #! /bin/bash
 
+touch ~/.at_work
 ln -s /workspace/container-data/.gitconfig.local ~/.gitconfig.local
 git clone https://github.com/andsens/homeshick.git ~/.homesick/repos/homeshick
 source ~/.homesick/repos/homeshick/homeshick.sh
