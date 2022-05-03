@@ -6,13 +6,13 @@
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
 [submodule "home/.zsh-custom/plugins/zsh-autosuggestions"]
 	path = home/.zsh-custom/plugins/zsh-autosuggestions
-	url = git://github.com/zsh-users/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
 [submodule "home/.zsh-custom/plugins/zsh-completions"]
 	path = home/.zsh-custom/plugins/zsh-completions
-	url = git://github.com/zsh-users/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions
 [submodule "home/.zsh-custom/plugins/zsh-histdb/zsh-histdb"]
 	path = home/.zsh-custom/plugins/zsh-histdb/zsh-histdb
-	url = git://github.com/larkery/zsh-histdb
+	url = https://github.com/larkery/zsh-histdb
 [submodule "home/.config/diff-so-fancy"]
-  path = home/.config/diff-so-fancy
-  url = https://github.com/so-fancy/diff-so-fancy.git
+	path = home/.config/diff-so-fancy
+	url = https://github.com/so-fancy/diff-so-fancy.git
