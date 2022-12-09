@@ -9,6 +9,6 @@ git -C $HOME/.homesick/repos/dotfiles submodule update --init --recursive
 homeshick link -f dotfiles
 
 npm install -g diff-so-fancy
-sudo apt install -y vim-nox fzf tmux sqlite3
+sudo apt update && sudo apt install -y vim-nox fzf tmux sqlite3
 
 vim +PlugInstall +qall
