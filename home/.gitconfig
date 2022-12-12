@@ -34,13 +34,13 @@
   prompt =
 [color "status"]
   added = green
-  changed = white
+  changed = yellow
   header =
-  localBranch =
+  localBranch = blue bold
   nobranch =
-  remoteBranch = cyan bold
+  remoteBranch = blue bold reverse
   unmerged = magenta bold reverse
-  untracked = red
+  untracked = magenta
   updated = green bold
 [commit]
 	template = ~/.gitmessage
@@ -52,9 +52,10 @@
 [fetch]
 	purne = true
 [filter "lfs"]
-	clean = git-lfs clean %f
+	clean = git-lfs clean -- %f
 	required = true
-	smudge = git-lfs smudge %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 [gui]
 	fontdiff = -family \"Source Code Pro\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
 [help]
