@@ -9,7 +9,12 @@ git -C $HOME/.homesick/repos/dotfiles submodule update --init --recursive
 
 homeshick link -f dotfiles
 
-npm install -g diff-so-fancy tldr @githubnext/github-copilot-cli
+npm install -g diff-so-fancy tldr @microsoft/inshellisense
 sudo apt update && sudo apt install -y vim-nox fzf tmux sqlite3 bat fd-find tree
+
+# check if the github cli is installed. Add the github cli to the path if it is
+if [ -x "$(command -v gh)" ]; then
+    gh extension install github/gh-copilot --force
+fi
 
 vim +PlugInstall +qall
