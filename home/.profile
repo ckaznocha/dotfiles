@@ -20,8 +20,7 @@ if [ -n "$BASH_VERSION" ]; then
     source_files+=($HOME/.bashrc)
 fi
 
-for i in "${source_files[@]}"
-do
+for i in "${source_files[@]}"; do
     if [ -s "$i" ]; then
         # shellcheck disable=SC1090
         source "$i"
@@ -70,18 +69,16 @@ if [ -d "$HOME/perl5" ]; then
     paths+=($PERL_LOCAL_LIB_ROOT/bin)
 fi
 
-for i in "${paths[@]}"
-do
+for i in "${paths[@]}"; do
     if [ -d "$i" ] && [[ $PATH != *"$i"* ]]; then
-      PATH=$i:$PATH
+        PATH=$i:$PATH
     fi
 done
 
 CDPATH="."
-for i in "${cdpaths[@]}"
-do
+for i in "${cdpaths[@]}"; do
     if [ -d "$i" ] && [[ $CDPATH != *"$i"* ]]; then
-      CDPATH=$CDPATH:$i
+        CDPATH=$CDPATH:$i
     fi
 done
 
@@ -90,10 +87,9 @@ eval_files=(
     nodenv
 )
 
-for i in "${eval_files[@]}"
-do
+for i in "${eval_files[@]}"; do
     if [ -s "$(which "$i")" ]; then
-      eval "$($i init -)"
+        eval "$($i init -)"
     fi
 done
 
@@ -105,8 +101,6 @@ export LESS="~#3FgJNMRSWXx4"
 export LANG=en_US.UTF-8
 export GPG_TTY=$(tty)
 
-eval "$(github-copilot-cli alias -- "$0")"
-
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-source "$HOME/.cargo/env"
+. "$HOME/.cargo/env"
