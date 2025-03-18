@@ -1,56 +1,68 @@
 [branch]
 	autosetuprebase = always
+	sort = -committerdate
 [cola]
 	fontdiff = Source Code Pro,11,-1,5,50,0,0,0,0,0
+[column]
+	ui = auto
 # Dracula Dark Theme
 [color]
-  ui = auto
+	ui = auto
 [color "branch"]
-  current = cyan bold reverse
-  local = white
-  plain =
-  remote = cyan
+	current = cyan bold reverse
+	local = white
+	plain =
+	remote = cyan
 [color "diff"]
-  commit =
-  func = cyan
-  plain =
-  whitespace = magenta reverse
-  meta = white
-  frag = cyan bold reverse
-  old = red
-  new = green
+	commit =
+	func = cyan
+	plain =
+	whitespace = magenta reverse
+	meta = white
+	frag = cyan bold reverse
+	old = red
+	new = green
 [color "grep"]
-  context =
-  filename =
-  function =
-  linenumber = white
-  match =
-  selected =
-  separator =
+	context =
+	filename =
+	function =
+	linenumber = white
+	match =
+	selected =
+	separator =
 [color "interactive"]
-  error =
-  header =
-  help =
-  prompt =
+	error =
+	header =
+	help =
+	prompt =
 [color "status"]
-  added = green
-  changed = yellow
-  header =
-  localBranch = blue bold
-  nobranch =
-  remoteBranch = blue bold reverse
-  unmerged = magenta bold reverse
-  untracked = magenta
-  updated = green bold
+	added = green
+	changed = yellow
+	header =
+	localBranch = blue bold
+	nobranch =
+	remoteBranch = blue bold reverse
+	unmerged = magenta bold reverse
+	untracked = magenta
+	updated = green bold
 [commit]
-	template = ~/.gitmessage
+	verbose = true
 [core]
 	autocrlf = input
 	editor = vim
 	excludesfile = ~/.gitignore
 	pager = diff-so-fancy | less -n
+	fsmonitor = true
+	untrackedCache = true
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
 [fetch]
 	purne = true
+	pruneTags = true
+	all = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	required = true
@@ -59,7 +71,7 @@
 [gui]
 	fontdiff = -family \"Source Code Pro\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
 [help]
-	autoCorrect = 10
+	autoCorrect = prompt
 [http "https://gopkg.in"]
 	followRedirects = true
 [include]
@@ -72,10 +84,19 @@
 [pull]
 	rebase = true
 [push]
-	default = current
+	default = simple
+	autoSetupRemote = true
+	followTags = true
 [rebase]
+	autoSquash = true
 	autoStash = true
+	updateRefs = true
+[rerere]
+	enabled = true
+	autoupdate = true
 [stash]
 	showPatch = true
 [status]
 	showUntrackedFiles = all
+[tag]
+	sort = version:refname
