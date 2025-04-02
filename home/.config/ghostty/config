@@ -1,0 +1,8 @@
+theme = Dracula+
+background-opacity = 0.9
+background-blur-radius = 20
+macos-titlebar-style = tabs
+keybind = global:opt+grave_accent=toggle_quick_terminal
+quick-terminal-screen = mouse
+shell-integration = detect
+alpha-blending=linear-corrected
