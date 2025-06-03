@@ -27,7 +27,6 @@ plugins=(
     brew
     bgnotify
     cabal
-    cargo
     colored-man-pages
     colorize
     command-not-found
@@ -42,10 +41,10 @@ plugins=(
     golang
     grc
     kubectl
+    macos
     man
     node
     npm
-    osx
     pip
     python
     ruby
@@ -58,7 +57,6 @@ plugins=(
     yarn
     zsh-autosuggestions
     zsh-completions
-    zsh-histdb
     zsh-syntax-highlighting
 )
 
