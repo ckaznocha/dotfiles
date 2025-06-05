@@ -11,6 +11,8 @@ homeshick link -f dotfiles
 
 npm install -g diff-so-fancy tldr @microsoft/inshellisense
 sudo apt update && sudo apt install -y vim-nox fzf tmux sqlite3 bat fd-find tree
+sudo update-alternatives --install /usr/local/bin/bat bat /usr/bin/batcat 20
+curl https://sh.rustup.rs -sSf | sh -s -- -y
 
 # check if the github cli is installed. Add the github cli to the path if it is
 if [ -x "$(command -v gh)" ]; then
