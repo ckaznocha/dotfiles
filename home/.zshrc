@@ -72,5 +72,3 @@ export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 [[ -s "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
 
 [ -f ~/.inshellisense/key-bindings.zsh ] && source ~/.inshellisense/key-bindings.zsh
-
-alias cat='bat --paging=never'
