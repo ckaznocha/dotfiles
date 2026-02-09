@@ -29,7 +29,6 @@ plugins=(
     cabal
     colored-man-pages
     colorize
-    command-not-found
     common-aliases
     compleat
     dash
@@ -47,9 +46,7 @@ plugins=(
     npm
     pip
     python
-    vundle
     yarn
-    zsh-autosuggestions
     zsh-syntax-highlighting
 )
 
