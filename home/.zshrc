@@ -47,16 +47,16 @@ plugins=(
     npm
     pip
     python
-    ruby
-    rust
-    swiftpm
-    tmux
-    tmuxinator
-    vagrant
+#    ruby
+#    rust
+#    swiftpm
+#    tmux
+#    tmuxinator
+#    vagrant
     vundle
     yarn
     zsh-autosuggestions
-    zsh-completions
+#    zsh-completions
     zsh-syntax-highlighting
 )
 
